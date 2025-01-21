@@ -1,0 +1,37 @@
+[
+    {
+      "_id": "1",
+      "name": "Mia Khalifa",
+      "images": "https://i.ibb.co.com/H4X3GSV/mia-khalifa.jpg",
+      "details": "TAKE YOUR VICTORIES, WHATEVER THEY MIGHT BE,CHERISH THEM, USE THEM, BUT DON’T SETTLE FOR THEM..",
+      "rating": 3
+    },
+    {
+      "_id": "2",
+      "name": "Robert Johnson",
+      "images": "https://images.squarespace-cdn.com/content/v1/55faab67e4b0914105347194/c26da7d6-257b-44e5-a3be-c354b806db82/JimW-+Dr+Rob+Johnson-06.jpg",
+      "details": "This is by far the best service I have ever used. The customer support is outstanding, and the product itself is top-notch. I couldn't be happier!",
+      "rating": 5
+    },
+    {
+      "_id": "3",
+      "name": "Kevin Pietersen",
+      "images": "https://i.ibb.co.com/6tVNNVv/piterson.jpg",
+      "details": "I ALWAYS SAY THAT THINGS ARE MEANT TO BE AND EVERYTHINGHAPPENS FOR A REASON, SO I DON’THAVE ANY REGRETS.",
+      "rating": 2
+    },
+    {
+      "_id": "4",
+      "name": "Hansika Motwani",
+      "images": "https://i.ibb.co.com/qkg9Hxc/hasnika.jpg",
+      "details": "AS AN ACTOR, IT IS OKAY TO FALL AND GET UP.THEN YOU CAN GIVE YOUR BEST. AUDIENCES DON’T RECEIVE IT WELL, YOU HAVE TO TAKE IT IN THE RIGHT SENSE. IS PART AND PARCEL OF BEING IN THE INDUSTRY.",
+      "rating": 4
+    },
+    {
+      "_id": "5",
+      "name": "Amy Jackson",
+      "images": "https://i.ibb.co.com/jzmGFT5/amejacson.jpg",
+      "details": "FOR ME, AGE DOESN'T MATTER. YOU'VE GOT TO GO WITH YOUR HEART",
+      "rating": 5
+    }
+  ]

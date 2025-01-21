@@ -1,0 +1,83 @@
+[
+    {
+      "ID": 1,
+      "User_Name": "johndoe",
+      "Password": "password123",
+      "Email": "johndoe@example.com",
+      "Full_Name": "John Doe",
+      "BirthDay": "1990-05-14"
+    },
+    {
+      "ID": 2,
+      "User_Name": "janedoe",
+      "Password": "janedoe2025",
+      "Email": "janedoe@example.com",
+      "Full_Name": "Jane Doe",
+      "BirthDay": "1992-03-22"
+    },
+    {
+      "ID": 3,
+      "User_Name": "samsmith",
+      "Password": "sam1234",
+      "Email": "samsmith@example.com",
+      "Full_Name": "Sam Smith",
+      "BirthDay": "1985-07-09"
+    },
+    {
+      "ID": 4,
+      "User_Name": "alicebrown",
+      "Password": "alice123",
+      "Email": "alicebrown@example.com",
+      "Full_Name": "Alice Brown",
+      "BirthDay": "1991-11-02"
+    },
+    {
+      "ID": 5,
+      "User_Name": "bobmartin",
+      "Password": "bobmartin2025",
+      "Email": "bobmartin@example.com",
+      "Full_Name": "Bob Martin",
+      "BirthDay": "1988-02-19"
+    },
+    {
+      "ID": 6,
+      "User_Name": "charleswilliams",
+      "Password": "charles321",
+      "Email": "charleswilliams@example.com",
+      "Full_Name": "Charles Williams",
+      "BirthDay": "1993-10-27"
+    },
+    {
+      "ID": 7,
+      "User_Name": "emilyjones",
+      "Password": "emilypassword",
+      "Email": "emilyjones@example.com",
+      "Full_Name": "Emily Jones",
+      "BirthDay": "1995-06-15"
+    },
+    {
+      "ID": 8,
+      "User_Name": "michaelthompson",
+      "Password": "michael1234",
+      "Email": "michaelthompson@example.com",
+      "Full_Name": "Michael Thompson",
+      "BirthDay": "1987-01-30"
+    },
+    {
+      "ID": 9,
+      "User_Name": "susanclark",
+      "Password": "susan1990",
+      "Email": "susanclark@example.com",
+      "Full_Name": "Susan Clark",
+      "BirthDay": "1990-08-05"
+    },
+    {
+      "ID": 10,
+      "User_Name": "davidwilliams",
+      "Password": "davidpwd2025",
+      "Email": "davidwilliams@example.com",
+      "Full_Name": "David Williams",
+      "BirthDay": "1983-12-12"
+    }
+  ]
+  

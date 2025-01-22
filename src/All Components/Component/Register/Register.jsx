@@ -1,10 +1,11 @@
 // Register.js
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';  // Import context
 
 const Register = () => {
-  const { creatUser} = useContext(AuthContext);  // Get creatUser, loading, and error from context
+  const { creatUser} = useContext(AuthContext);
+  const Navaigate=useNavigate();
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -16,6 +17,8 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log('User created successfully:', user);
+        e.target.reset();
+        Navaigate("/username")
       })
       .catch((error) => {
         console.error('Error creating user:', error.message);

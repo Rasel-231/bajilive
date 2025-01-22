@@ -2,9 +2,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const { loginUser} = useContext(AuthContext);  // Get login method and states
+  const Navigate=useNavigate();
 
   const handleForms = (e) => {
     e.preventDefault();
@@ -16,7 +18,8 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log('User logged in successfully:', user);
-        // Optionally redirect user after successful login (e.g., use history.push())
+        e.target.reset();
+        Navigate("/")
       })
       .catch((error) => {
         console.error('Error logging in:', error.message);

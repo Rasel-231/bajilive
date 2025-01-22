@@ -87,7 +87,7 @@ const Navbar = () => {
       <li><a href="https://nihon11.github.io/Bajilive/" target="_blank">BAJILIVE</a></li>
       <Link to="/userdata"><li><a>USER ENTRY</a></li></Link>
       <Link to="/username"><li><a>USER NAME</a></li></Link>
-      <Link to='/promotions'><li><a>PROMOTIONS</a></li></Link>
+      <Link to='/promotion'><li><a>PROMOTIONS</a></li></Link>
       <Link to='/about'><li><a>ABOUT US</a></li></Link>
     </>
   ];

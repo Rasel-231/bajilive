@@ -9,6 +9,8 @@ import Login from "../Component/Login/Login";
 import About from "../Component/About/About";
 import User from "../Component/User/User";
 import ShowUser from "../Component/ShowUser/ShowUser";
+import Promotion from "../Component/Promotion/Promotion";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -22,7 +24,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:"username",
-                element:<ShowUser/>
+                element:<PrivateRoutes><ShowUser/></PrivateRoutes>
             },
             {
                 path:"userdata",
@@ -43,6 +45,10 @@ export const router = createBrowserRouter([
             {
                 path:"about",
                 element:<About/>
+            },
+            {
+                path:"promotion",
+                element:<Promotion/>
             },
         ]
     }

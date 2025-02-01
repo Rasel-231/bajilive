@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import Title from "../../Component/Title/Title";
 import Game from "../PopularGames/Game/Game"
 
@@ -13,12 +13,13 @@ const PopularGames = () => {
   }
   const allGames=showAll ? game : game.slice(0,3)
   
-useEffect(()=>{
-fetch("data.json")
+
+
+fetch("http://localhost:5000/games")
 .then(res=>res.json())
 .then(data=>{
   setGame(data)})
-},[])
+
 
 
   return (

@@ -19,7 +19,7 @@ const Login = () => {
         const user = result.user;
         console.log('User logged in successfully:', user);
         e.target.reset();
-        Navigate("/")
+        Navigate("/username")
       })
       .catch((error) => {
         console.error('Error logging in:', error.message);

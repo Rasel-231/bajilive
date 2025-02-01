@@ -4,7 +4,7 @@ const Promotion = () => {
     const[promotion,setPromotion]=useState([]);
 
     useEffect(()=>{
-        fetch("promotions.json")
+        fetch("http://localhost:5000/promotion")
         .then(res=>res.json())
         .then(data=>{
             console.log(data)

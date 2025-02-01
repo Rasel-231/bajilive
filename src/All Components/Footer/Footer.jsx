@@ -1,11 +1,10 @@
 import React from 'react';
-import brandImg from "../../assets/brandImg/brandLogo.png"
 const Footer = () => {
     return (
       <div>
            <footer className="footer bg-neutral text-neutral-content  p-10">
   <aside>
-  <img src={brandImg} alt="404" className='w-20 h-12'/>
+  <img src="https://i.ibb.co.com/21BWGKYc/brandlogo.png" alt="404" className='w-20 h-12'/>
     <p>
       A Gamebling Company
       <br />

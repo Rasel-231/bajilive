@@ -1,5 +1,10 @@
-const User = () => {
-  const uploadData = (e) => {
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+
+const UpdateUser = () => {
+  const loadedUsers = useLoaderData();
+
+  const updateData = (e) => {
     e.preventDefault();
     const form = e.target;
     const UserName = form.UserName.value;
@@ -7,35 +12,42 @@ const User = () => {
     const email = form.email.value;
     const fullname = form.fullname.value;
     const date = form.date.value;
-    const userInfo = { UserName, password, email, fullname, date};
-   
-    fetch("http://localhost:5000/UserData", {
-      method: "POST",
+    const userInformation = { UserName, password, email, fullname, date };
+
+    fetch(`http://localhost:5000/UserData/${loadedUsers._id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(userInfo),
+      body: JSON.stringify(userInformation),
     })
       .then((res) => res.json())
       .then((data) => {
         console.error("error this page", data);
+        if (data.modifiedCount > 0) {
+          alert("Data updated Successfully..!");
+        }
       });
   };
-
   return (
+  
+
+    
     <div className="hero bg-base-200 min-h-screen ">
+      
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <form onSubmit={uploadData} className="card-body">
+        <form onSubmit={updateData} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text">User Name</span>
             </label>
             <input
               type="text"
-              placeholder="UserName"
               name="UserName"
+              defaultValue={loadedUsers?.UserName}
               className="input input-bordered"
               required
+             
             />
           </div>
 
@@ -45,8 +57,9 @@ const User = () => {
             </label>
             <input
               type="password"
-              placeholder="password"
+              /*  */
               name="password"
+              defaultValue={loadedUsers?.password}
               className="input input-bordered"
               required
             />
@@ -58,8 +71,8 @@ const User = () => {
             </label>
             <input
               type="email"
+              defaultValue={loadedUsers?.email}
               name="email"
-              placeholder="email"
               className="input input-bordered"
               required
             />
@@ -70,8 +83,8 @@ const User = () => {
             </label>
             <input
               type="text"
-              placeholder="Full Name"
               name="fullname"
+              defaultValue={loadedUsers?.fullname}
               className="input input-bordered"
               required
             />
@@ -82,6 +95,7 @@ const User = () => {
             </label>
             <input
               type="date"
+              defaultValue={loadedUsers?.date}
               name="date"
               className="input input-bordered"
               required
@@ -96,4 +110,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UpdateUser;

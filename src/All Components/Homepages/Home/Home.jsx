@@ -6,6 +6,7 @@ import MiddleBanner from '../MiddleBanner/MiddleBanner';
 import DownBanner from '../DownBanner/DownBanner';
 import Reviews from '../Reviews/Reviews';
 import SwiperBanner from '../SwiperBanner/SwiperBanner';
+import Videos from '../../Component/Videos/Videos';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
           <MiddleBanner/>
           <ContactPages/>
           <PopularGames/>
+          <Videos/>
           <DownBanner/>
           <Reviews/>
         </div>

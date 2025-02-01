@@ -11,6 +11,7 @@ import User from "../Component/User/User";
 import ShowUser from "../Component/ShowUser/ShowUser";
 import Promotion from "../Component/Promotion/Promotion";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateUser from "../Component/ShowUser/UpdateUser/UpdateUser";
 
 export const router = createBrowserRouter([
     {
@@ -24,7 +25,8 @@ export const router = createBrowserRouter([
             },
             {
                 path:"username",
-                element:<PrivateRoutes><ShowUser/></PrivateRoutes>
+                element:<PrivateRoutes><ShowUser/></PrivateRoutes>,
+                loader:()=>fetch("http://localhost:5000/UserData")
             },
             {
                 path:"userdata",
@@ -49,6 +51,11 @@ export const router = createBrowserRouter([
             {
                 path:"promotion",
                 element:<Promotion/>
+            },
+            {
+                path:"update/:id",
+                element:<UpdateUser/>,
+                loader:({params})=>fetch(`http://localhost:5000/UserData/${params.id}`)
             },
         ]
     }

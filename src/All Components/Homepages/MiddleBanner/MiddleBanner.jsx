@@ -1,6 +1,5 @@
 import React from "react";
 import Title from "../../Component/Title/Title";
-import banner from "../../../assets/MiddleBanner/banner.jpeg"
 const MiddleBanner = () => {
   return (
     <>
@@ -8,7 +7,7 @@ const MiddleBanner = () => {
       <section
         className="text-center sm:px-20 px-10 h-[300px] sm:h-[460px] z-1"
         style={{
-            backgroundImage: `url(${banner})`,
+            backgroundImage: "url('https://i.ibb.co.com/MDVr6Gvy/banner.jpg')",
             backgroundSize: "cover",
             display:"flex",
             justifyContent:"center",

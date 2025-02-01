@@ -4,12 +4,6 @@ import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import Title from "../../Component/Title/Title";
-import slide1 from "../../../assets/SwiperBanner/slide1.jpg"
-import slide2 from "../../../assets/SwiperBanner/slide2.jpg"
-import slide3 from "../../../assets/SwiperBanner/slide3.jpg"
-import slide4 from "../../../assets/SwiperBanner/slide4.jpg"
-import slide5 from "../../../assets/SwiperBanner/slide5.jpg"
-import slide6 from "../../../assets/SwiperBanner/slide6.png"
 import { Autoplay, Pagination } from "swiper/modules";
 
 
@@ -30,12 +24,12 @@ const SwiperBanner = () => {
 
       
       >
-        <SwiperSlide><img src={slide1} alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Sicbo</p></SwiperSlide>
-        <SwiperSlide><img src={slide2} alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Evolution</p></SwiperSlide>
-        <SwiperSlide><img src={slide3} alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Casino</p></SwiperSlide>
-        <SwiperSlide><img src={slide4} alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Roulette</p></SwiperSlide>
-        <SwiperSlide><img src={slide5} alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Pokker</p></SwiperSlide>
-        <SwiperSlide><img src={slide6} alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Exchange</p></SwiperSlide>
+        <SwiperSlide><img src="https://i.ibb.co.com/V00G54rZ/slide1.jpg" alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Sicbo</p></SwiperSlide>
+        <SwiperSlide><img src="https://i.ibb.co.com/Cp8cLgQV/slide2.jpg" alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Evolution</p></SwiperSlide>
+        <SwiperSlide><img src="https://i.ibb.co.com/GvKGTTMd/slide3.jpg" alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Casino</p></SwiperSlide>
+        <SwiperSlide><img src="https://i.ibb.co.com/0V2TGB7D/slide4.jpg" alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Roulette</p></SwiperSlide>
+        <SwiperSlide><img src="https://i.ibb.co.com/j91H94bw/slide5.jpg" alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Pokker</p></SwiperSlide>
+        <SwiperSlide><img src="https://i.ibb.co.com/FkBWhF9X/slide6.png" alt="404" className="h-[120px] sm:h-[220px]  rounded-md shadow-sm"/><p className="font-bold -mt-16 text-center text-white text-xl pb-3">Exchange</p></SwiperSlide>
       </Swiper>
     </div>
   );

@@ -4,7 +4,7 @@ const Promotion = () => {
     const[promotion,setPromotion]=useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/promotion")
+        fetch("https://server-one-mocha.vercel.app/promotion")
         .then(res=>res.json())
         .then(data=>{
             console.log(data)

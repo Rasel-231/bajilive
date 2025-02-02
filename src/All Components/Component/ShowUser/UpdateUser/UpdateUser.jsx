@@ -14,7 +14,7 @@ const UpdateUser = () => {
     const date = form.date.value;
     const userInformation = { UserName, password, email, fullname, date };
 
-    fetch(`http://localhost:5000/UserData/${loadedUsers._id}`, {
+    fetch(`https://server-one-mocha.vercel.app/UserData/${loadedUsers._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

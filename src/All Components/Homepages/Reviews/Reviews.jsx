@@ -14,7 +14,7 @@ import { Navigation } from "swiper/modules";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://server-one-mocha.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

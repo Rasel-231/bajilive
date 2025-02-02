@@ -9,7 +9,7 @@ const User = () => {
     const date = form.date.value;
     const userInfo = { UserName, password, email, fullname, date};
    
-    fetch("http://localhost:5000/UserData", {
+    fetch("https://server-one-mocha.vercel.app/UserData", {
       method: "POST",
       headers: {
         "content-type": "application/json",

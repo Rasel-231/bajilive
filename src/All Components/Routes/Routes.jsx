@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
             {
                 path:"username",
                 element:<PrivateRoutes><ShowUser/></PrivateRoutes>,
-                loader:()=>fetch("http://localhost:5000/UserData")
+                loader:()=>fetch("https://server-one-mocha.vercel.app/UserData")
             },
             {
                 path:"userdata",
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
             {
                 path:"update/:id",
                 element:<UpdateUser/>,
-                loader:({params})=>fetch(`http://localhost:5000/UserData/${params.id}`)
+                loader:({params})=>fetch(`https://server-one-mocha.vercel.app/UserData/${params.id}`)
             },
         ]
     }

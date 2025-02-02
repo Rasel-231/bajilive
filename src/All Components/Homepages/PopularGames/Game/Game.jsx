@@ -7,7 +7,7 @@ const Game = ({received}) => {
            <div className="flex justify-center items-center my-2 py-2">
            <div className='border border-black rounded shadow-md text-center'>
             <div className='flex justify-center items-center '>
-                <img src={img} alt="404" className="w-full h-[320px]"/>
+                <img src={img} alt="404" className="w-full sm:h-[320px] h-[200px]"/>
             </div>
             <div>
                 <p className="text-xl font-bold uppercase">{title}</p>

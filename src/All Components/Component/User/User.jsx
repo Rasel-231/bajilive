@@ -1,14 +1,15 @@
 const User = () => {
   const uploadData = (e) => {
     e.preventDefault();
+    form.reset()
     const form = e.target;
     const UserName = form.UserName.value;
     const password = form.password.value;
     const email = form.email.value;
     const fullname = form.fullname.value;
     const date = form.date.value;
-    const userInfo = { UserName, password, email, fullname, date};
-   
+    const userInfo = { UserName, password, email, fullname, date };
+
     fetch("https://server-one-mocha.vercel.app/UserData", {
       method: "POST",
       headers: {
@@ -18,7 +19,19 @@ const User = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.error("error this page", data);
+        // Check for successful response
+        if (data.message === "Username already exists.") {
+          alert("This username is already taken. Please try again with a different username.");
+        } else if (data && data.insertedId) {
+          alert("Data uploaded successfully!");
+        } else {
+          alert("Something went wrong, please try again.");
+        }
+      })
+      .catch((err) => {
+        // Handle errors like network issues
+        console.error("Error:", err);
+        alert("Error uploading data, please try again.");
       });
   };
 

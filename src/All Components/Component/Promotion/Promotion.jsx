@@ -4,7 +4,7 @@ const Promotion = () => {
     const[promotion,setPromotion]=useState([]);
 
     useEffect(()=>{
-        fetch("https://server-j567ib6mn-halifaxs-projects.vercel.app/promotion")
+        fetch(`${import.meta.env.VITE_BASE_URL}/promotion`)
         .then(res=>res.json())
         .then(data=>{
             console.log(data)

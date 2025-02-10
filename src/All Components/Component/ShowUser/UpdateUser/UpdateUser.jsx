@@ -17,7 +17,7 @@ const UpdateUser = () => {
     const userInformation = { UserName, password, email, fullname, date };
     form.reset()
 
-    fetch(`https://server-j567ib6mn-halifaxs-projects.vercel.app/UserData/${loadedUsers._id}`, {
+    fetch(`${import.meta.env.VITE_BASE_URL}/UserData/${loadedUsers._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

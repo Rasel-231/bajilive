@@ -14,7 +14,7 @@ import { Navigation } from "swiper/modules";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://server-j567ib6mn-halifaxs-projects.vercel.app/reviews")
+    fetch(`${import.meta.env.VITE_BASE_URL}/reviews`)
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

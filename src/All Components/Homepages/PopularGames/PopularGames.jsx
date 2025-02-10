@@ -15,7 +15,7 @@ const PopularGames = () => {
   
 
 
-fetch("https://server-j567ib6mn-halifaxs-projects.vercel.app/games")
+fetch(`${import.meta.env.VITE_BASE_URL}/games`)
 .then(res=>res.json())
 .then(data=>{
   setGame(data)})

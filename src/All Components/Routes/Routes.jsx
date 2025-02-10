@@ -14,7 +14,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import UpdateUser from "../Component/ShowUser/UpdateUser/UpdateUser";
 
 
-const baseURL=process.env.BACKEND_BASE_URL;
+
 
 
 
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
             {
                 path:"username",
                 element:<PrivateRoutes><ShowUser/></PrivateRoutes>,
-                loader:()=>fetch(`${baseURL}/UserData`)
+                loader:()=>fetch(`${import.meta.env.VITE_BASE_URL}/UserData`)
             },
             {
                 path:"userdata",
@@ -60,7 +60,7 @@ export const router = createBrowserRouter([
             {
                 path:"update/:id",
                 element:<UpdateUser/>,
-                loader:({params})=>fetch(`${baseURL}/UserData/${params.id}`)
+                loader:({params})=>fetch(`${import.meta.env.VITE_BASE_URL}/UserData/${params.id}`)
             },
         ]
     }

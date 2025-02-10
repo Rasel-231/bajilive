@@ -17,7 +17,7 @@ const User = () => {
     const userInfo = { UserName, password, email, fullname, date };
     form.reset()
 
-    fetch("https://server-j567ib6mn-halifaxs-projects.vercel.app/UserData", {
+    fetch(`${import.meta.env.VITE_BASE_URL}/UserData`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

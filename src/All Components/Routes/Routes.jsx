@@ -13,6 +13,11 @@ import Promotion from "../Component/Promotion/Promotion";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateUser from "../Component/ShowUser/UpdateUser/UpdateUser";
 
+
+const baseURL=process.env.BACKEND_BASE_URL;
+
+
+
 export const router = createBrowserRouter([
     {
         path:"/",
@@ -26,7 +31,7 @@ export const router = createBrowserRouter([
             {
                 path:"username",
                 element:<PrivateRoutes><ShowUser/></PrivateRoutes>,
-                loader:()=>fetch("https://server-one-mocha.vercel.app/UserData")
+                loader:()=>fetch(`${baseURL}/UserData`)
             },
             {
                 path:"userdata",
@@ -55,7 +60,7 @@ export const router = createBrowserRouter([
             {
                 path:"update/:id",
                 element:<UpdateUser/>,
-                loader:({params})=>fetch(`https://server-one-mocha.vercel.app/UserData/${params.id}`)
+                loader:({params})=>fetch(`${baseURL}/UserData/${params.id}`)
             },
         ]
     }

@@ -4,7 +4,7 @@ const Promotion = () => {
     const[promotion,setPromotion]=useState([]);
 
     useEffect(()=>{
-        fetch("https://server-one-mocha.vercel.app/promotion")
+        fetch("https://server-j567ib6mn-halifaxs-projects.vercel.app/promotion")
         .then(res=>res.json())
         .then(data=>{
             console.log(data)

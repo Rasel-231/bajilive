@@ -15,7 +15,7 @@ const PopularGames = () => {
   
 
 
-fetch("https://server-one-mocha.vercel.app/games")
+fetch("https://server-j567ib6mn-halifaxs-projects.vercel.app/games")
 .then(res=>res.json())
 .then(data=>{
   setGame(data)})

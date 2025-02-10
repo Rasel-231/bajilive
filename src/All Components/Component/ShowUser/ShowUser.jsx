@@ -8,7 +8,7 @@ const ShowUser = () => {
   const [users, setUsers] = useState(loadedUsers);
 
   const DeleteData = (_id) => {
-    fetch(`https://server-one-mocha.vercel.app/userData/${_id}`, {
+    fetch(`https://server-j567ib6mn-halifaxs-projects.vercel.app/userData/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json(res))
@@ -25,11 +25,11 @@ const ShowUser = () => {
     <>
 
 
-      <div className="space-y-4 p-4 text-white font-bold shadow-sm">
+      <div className="flex space-y-4 p-4 text-white font-bold shadow-sm">
         {users && users.length > 0 ? (
           users.map((user, index) => (
             <section
-              className="p-4 border border-gray-300 shadow-md justify-center bg-no-repeat  bg-cover bg-center rounded-lg relative"
+              className="p-4 border border-gray-300 shadow-md  justify-center bg-no-repeat  bg-cover bg-center rounded-lg relative"
               style={{
                 backgroundImage:
                   "url(https://i.ibb.co.com/R40Ks2yG/maxresdefault.jpg)",

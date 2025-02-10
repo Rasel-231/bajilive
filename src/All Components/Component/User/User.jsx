@@ -1,7 +1,13 @@
+import { useLocation, useNavigation } from "react-router-dom";
+
 const User = () => {
+
+  const location=useLocation();
+  const navigate=useNavigation()
+
   const uploadData = (e) => {
     e.preventDefault();
-    form.reset()
+    
     const form = e.target;
     const UserName = form.UserName.value;
     const password = form.password.value;
@@ -9,8 +15,9 @@ const User = () => {
     const fullname = form.fullname.value;
     const date = form.date.value;
     const userInfo = { UserName, password, email, fullname, date };
+    form.reset()
 
-    fetch("https://server-one-mocha.vercel.app/UserData", {
+    fetch("https://server-j567ib6mn-halifaxs-projects.vercel.app/UserData", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -21,9 +28,9 @@ const User = () => {
       .then((data) => {
         // Check for successful response
         if (data.message === "Username already exists.") {
-          alert("This username is already taken. Please try again with a different username.");
-        } else if (data && data.insertedId) {
+          alert("This username is already taken. Please try again with a different username.");} else if (data && data.insertedId) {
           alert("Data uploaded successfully!");
+          navigate("/username", { state: { from: location } });
         } else {
           alert("Something went wrong, please try again.");
         }

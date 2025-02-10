@@ -1,8 +1,10 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate, useNavigation } from "react-router-dom";
 
 const UpdateUser = () => {
   const loadedUsers = useLoaderData();
+  const location=useLocation()
+  const navigate=useNavigation()
 
   const updateData = (e) => {
     e.preventDefault();
@@ -13,8 +15,9 @@ const UpdateUser = () => {
     const fullname = form.fullname.value;
     const date = form.date.value;
     const userInformation = { UserName, password, email, fullname, date };
+    form.reset()
 
-    fetch(`https://server-one-mocha.vercel.app/UserData/${loadedUsers._id}`, {
+    fetch(`https://server-j567ib6mn-halifaxs-projects.vercel.app/UserData/${loadedUsers._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -26,6 +29,7 @@ const UpdateUser = () => {
         console.error("error this page", data);
         if (data.modifiedCount > 0) {
           alert("Data updated Successfully..!");
+          navigate("/username",{state: {from:location}})
         }
       });
   };

@@ -12,6 +12,7 @@ import ShowUser from "../Component/ShowUser/ShowUser";
 import Promotion from "../Component/Promotion/Promotion";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateUser from "../Component/ShowUser/UpdateUser/UpdateUser";
+import Admin from "../Component/Admin/Admin";
 
 
 
@@ -61,6 +62,11 @@ export const router = createBrowserRouter([
                 path:"update/:id",
                 element:<UpdateUser/>,
                 loader:({params})=>fetch(`${import.meta.env.VITE_BASE_URL}/UserData/${params.id}`)
+            },
+            {
+                path:"admin",
+                element:<PrivateRoutes><Admin/></PrivateRoutes>,
+                loader:()=>fetch(`${import.meta.env.VITE_BASE_URL}/admin`)
             },
         ]
     }
